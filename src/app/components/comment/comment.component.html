@@ -1,0 +1,10 @@
+<form [formGroup]="commentForm" (submit)="onFormSubmit(commentForm)">
+  <div class="px-60 py-48 bg-secondary rounded">
+    <h2 class="fw-500">Leave a comment</h2>
+    <input type="text" class="box--shadow-bottom border--none rounded w-100 fs-20 p-16" formControlName="comment" placeholder="Write your response...">
+    <h2 class="fw-500 my-10">Rate the post</h2>
+    <p-rating formControlName="rating" [cancel]="false"></p-rating>
+    <button class="btn-dark my-16">Submit</button>
+  </div>
+
+</form>

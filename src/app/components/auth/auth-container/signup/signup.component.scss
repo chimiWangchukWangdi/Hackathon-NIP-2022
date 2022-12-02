@@ -1,0 +1,18 @@
+@import "src/assets/stylesheets/variables";
+
+:host ::ng-deep.login-wrapper {
+  margin: 0;
+
+  .p-inputtext, .p-float-label label {
+    font-size: 12px !important;
+    width: 100%;
+  }
+
+  .p-button {
+    font-size: 12px !important;
+  }
+
+  .signin-potions {
+    border-top: 2px solid $primary ;
+  }
+}

@@ -1,0 +1,35 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="tree-flow w-100 my-20">
+  <div fxLayout="column" class="w-70 mt-20 mb-10">
+    <h3>Register</h3>
+    <p-accordion>
+      <p-accordionTab header="Start Up" [(selected)]="activeState[1]">
+        <div fxLayout="column" fxLayoutGap="20px">
+          <a href="https://www.wipo.int/">World Intelectual Property Organization</a>
+          <a href="http://www.ipbhutan.gov.bt/">IP Bhutan Gov</a>
+        </div>
+      </p-accordionTab>
+    </p-accordion>
+  </div>
+  <div fxLayout="column" class="w-70 mt-20 mb-10">
+    <h3>Financial</h3>
+    <p-accordion>
+      <p-accordionTab header="Loan" [(selected)]="activeState[2]">
+        <div fxLayout="column" fxLayoutGap="20px">
+          <a href="https://www.bob.bt/wp-content/uploads/2022/05/Consumer-Loan-May-2022.pdf">BoB Loan</a>
+          <a href="https://www.bnb.bt/wp-content/uploads/dld/FORMS/Consumer%20Loan/CONSUMER%20LOAN.pdf">BNB Loan</a>
+        </div>
+      </p-accordionTab>
+      <p-accordionTab header="Investor" [(selected)]="activeState[3]">
+        <a href="https://loden.org/">Loden Foundation</a>
+      </p-accordionTab>
+    </p-accordion>
+  </div>
+  <div fxLayout="column" class="w-70 mt-20 mb-80">
+    <h3>Register</h3>
+    <p-accordion>
+      <p-accordionTab header="Consulting" [(selected)]="activeState[4]">
+        <a href="https://loden.org/about/contact-us/">Loden Foundation</a>
+      </p-accordionTab>
+    </p-accordion>
+  </div>
+</div>

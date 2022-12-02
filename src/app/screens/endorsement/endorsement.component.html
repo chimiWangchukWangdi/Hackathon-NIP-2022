@@ -1,0 +1,73 @@
+<div class="endorsement w-100 my-30" fxLayout="column" fxLayoutGap="60">
+    <div class="w-70 mx-auto" fxLayout="row" fxLayoutGap="60">
+        <div class="w-50">
+          <div class="w-100">
+            <h1 class="fs-38">{{endoresement.title}}</h1>
+            <div fxLayout="row" fxLayoutGap="16" fxLayoutAlign="start center">
+              <img src="{{endoresement.user.profile}}" class="rounded--circle" alt="profile" width="50" height="50">
+              <div fxLayout="column">
+                <p class="m-0 fs-20 fw-400">Written by {{endoresement.user.name}}</p>
+                <p class="my-2">{{convertDate(endoresement.createdAt)}}</p>
+                <p class="my-2">{{endoresement.user.location.dzongkhag}}</p>
+              </div>
+            </div>
+            <div class="fs-24 w-80" [innerHTML]="endoresement.description">
+            </div>
+          </div>
+<!--          <div class="border rounded&#45;&#45;md p-20 text&#45;&#45;center w-40">-->
+<!--            <i class="pi pi-briefcase" style="font-size: 40px"></i>-->
+<!--            <h2 class="mt-30 my-0">Job Title</h2>-->
+<!--            <p class="fs-18 text-primary my-0">Quisque blandit nunc at metus maximus, at euismod sem iaculis. Maecenas-->
+<!--              libero quam, vulputate ut turpis quis, malesuada placerat erat.-->
+<!--            </p>-->
+<!--          </div>-->
+
+        </div>
+        <div class="w-50 form">
+            <div class="p-32 box--shadow-bottom" fxLayout="column" fxLayoutGap="32">
+                <p class="fs-24 fw-600 m-0">{{endoresement.endorse.length}} endorsed so far. Help us get to {{endoresement.goal}}</p>
+                <p-progressBar value="{{endoresement.endorse.length}}"></p-progressBar>
+
+            </div>
+            <form [formGroup]="signatureForm" (submit)="onFormSubmit(signatureForm)" action="" class="p-32 w-100" fxLayout="column" fxLayoutGap="32">
+                <p class="fs-28 fw-600 m-0">Thank you for signing</p>
+                <input id="float-input" class="fs-18 bg-secondary w-100 my-16" type="text" formControlName="email" placeholder="Your Email">
+                <textarea cols="30" rows="5" class="fs-18 bg-secondary w-100" formControlName="comment" placeholder="This is the comment"></textarea>
+                <button class="btn-primary">Support this post</button>
+            </form>
+            <div class="px-32 py-16 mb-10 bg-light">
+                <div fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="16">
+                    <img src="../../../assets/images/profile.png" alt="Profile picture"
+                    width="40" height="40" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9]"
+                    class="cursor--pointer">
+                </div>
+                <p class="fw-600 my-14" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10">
+                    <i class="pi pi-check p-4 rounded--circle border" style="font-size: 10px"></i>
+                    <span class="text--black-75">100 people</span>
+                    have endorsed</p>
+            </div>
+        </div>
+    </div>
+    <div class="w-60 mx-auto" fxLayout="column" fxLayoutAlign="center center">
+        <app-comment [id]="endoresement._id" [refresh]="endorsementDetail()" [type]= "'endorsement'" class="w-100"></app-comment>
+        <div class="w-100 bg-light py-20">
+            <div class="w-100 px-60" fxLayout="row" fxLayoutAlign="space-between">
+                <h2 class="fw-500">Recent responses</h2>
+                <p class="text-primary cursor--pointer">See all</p>
+            </div>
+            <div class="w-100 px-60" fxLayout="column" fxLayoutGap="20">
+                <div class="border--primary rounded bg-white" *ngFor="let response of comments">
+                    <div class="p-20 box--shadow-bottom" fxLayout="row" fxLayoutGap="10" fxLayoutAlign="start center">
+                        <img src="{{response.user.profile}}" class="rounded--circle" alt="Profile picture"
+                        width="50" height="50">
+                        <p class="text-primary fw-600">
+                            {{response.user.name}}<span class="text-black fw-500"> commented on</span>
+                        </p>
+                        <p>{{convertDate(response.time)}}</p>
+                    </div>
+                    <p class="p-20 m-0">{{response.comment}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

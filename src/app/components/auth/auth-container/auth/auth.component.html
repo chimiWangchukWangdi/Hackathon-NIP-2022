@@ -1,0 +1,57 @@
+<div fxLayout fxLayoutAlign="center center" class="login-wrapper bg--primary">
+  <div class="bg--white rounded w-100">
+    <p-tabView>
+      <p-tabPanel header="Sign in">
+        <form [formGroup]="signInForm">
+          <div fxLayout fxLayoutAlign="center center">
+            <div class="w-100 bg--white br-bl-4 br-br-4 pt-3">
+              <div class="p-24 mt-8">
+                <input id="float-email" type="email" class="bg-secondary fs-18 w-100" formControlName="email" placeholder="Email Address" required>
+                <input id="float-password" type="password" class="bg-secondary fs-18 w-100 my-20" formControlName="password" placeholder="Password" required>
+                <div class="p-field-checkbox mb-20 fs-16" fxLayout="row" fxLayoutGap="10" fxLayoutAlign="start center">
+                  <input type="checkbox">
+                  <label class="ms-4">Remember me</label>
+                </div>
+                <button class="w-100 btn-primary" (click)="logIn()">Sign In</button>
+                <div fxLayoutAlign="center center" class="fs-16 my-16 w-100 text-primary">
+                  <a class="cursor--pointer">Forgot your password?</a>
+                </div>
+              </div>
+              <div class="w-100 signin-potions p-40" fxLayout="row" fxLayoutGap="16">
+                <button class="btn-primary w-100">Sign in with Facebook</button>
+                <button class="btn-primary w-100">Sign in with Google</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </p-tabPanel>
+      <p-tabPanel header="Sign up">
+        <form [formGroup]="signUpForm">
+          <div fxLayoutAlign="center center">
+            <div class="bg--white w-100 br-bl-4 br-br-4 pt-3">
+              <div class="p-24 mt-8">
+                <input formControlName="name" id="name" type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Name" required>
+                <input formControlName="email" id="email" type="email" class="bg-secondary fs-18 w-100 mb-20" placeholder="Email address" required>
+                <input formControlName="password" id="password" type="password" class="bg-secondary fs-18 w-100 mb-20" placeholder="Password" required>
+                <input formControlName="password" id="repeatPassword" type="password" class="bg-secondary fs-18 w-100 mb-20" placeholder="Retype password" required>
+                <input formControlName="contact" id="contact" type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Contact" required>
+                <p-dropdown formControlName="location" [options]="cities" [(ngModel)]="selectedCity1" placeholder="Select your Dzongkhag"
+                [showClear]="true">
+                </p-dropdown>
+
+                <div class="dropzone bg-secondary mb-12 rounded text--center" >
+                  <input
+                    type="file"
+                    name="file"
+                    formControlName="file"
+                    (change)="onFileChange($event)">
+                </div>
+                <button  class="w-100 btn-primary mb-16" (click)="signUp()">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+</div>

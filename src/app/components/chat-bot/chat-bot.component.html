@@ -1,0 +1,18 @@
+<div class="position--fixed bg-white px-2 pt-2 rounded--circle chat" (click)="onclick()">
+  <img src="../../../assets/images/chat.svg" alt="chat" width="45" height="45">
+</div>
+<ng-container *ngIf="visible">
+  <div class="chat--container bg-white position--fixed">
+    <div class="chat--header rounded px-20 py-10 bg-primary text-white fs-20" fxLayout="row" fxLayoutGap="20" fxLayoutAlign="start center">
+      <img src="../../../assets/images/bot.svg" class="bg-light-blue rounded--circle p-8" alt="bot" width="50" height="50">
+      <p>Messages</p>
+    </div>
+<!--    User listing-->
+<!--    <div>-->
+<!--      <app-chat-list></app-chat-list>-->
+<!--    </div>-->
+    <div>
+      <app-chats></app-chats>
+    </div>
+  </div>
+</ng-container>

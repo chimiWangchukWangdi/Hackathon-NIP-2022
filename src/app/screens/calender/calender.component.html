@@ -1,0 +1,21 @@
+<div class="bg--whiteRock p-50">
+  <div fxLayout="row" fxLayoutAlign="space-between" class="">
+    <h1 class="my-0">Calender</h1>
+    <div fxLayoutAlign="center center" class="w-15 br-4 bg--primary color--white">
+      <i class="pi pi-calendar me-4"></i>
+      <span>Create your own event</span>
+    </div>
+  </div>
+  <div>
+    <div fxFlex="50">
+      <p-gmap [style]="{'width':'100%','height':'320px'}" ></p-gmap>
+    </div>
+    <div fxFlex="50" class="pt-50 px-36 bg--white br-tr-4 br-br-4">
+      <h3>Find events near you within</h3>
+      <div fxLayout="row" fxLayoutAlign="space-between" *ngFor="let event of [1, 2]">
+        <p class="text-bold px-80 py-16 bg--grey br-4" *ngFor="let distance of [1, 2, 3]">1 mile</p>
+      </div>
+    </div>
+  </div>
+</div>
+

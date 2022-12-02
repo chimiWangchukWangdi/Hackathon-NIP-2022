@@ -1,0 +1,26 @@
+.location {
+  border-right: 2px solid white;
+}
+
+.event-form {
+  position: absolute;
+  right: 7rem;
+  top: 1rem;
+}
+
+:host ::ng-deep.event-form {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  .event-form__input {
+    width: 100% !important;
+    .p-inputtext, .p-float-label label {
+      font-size: 12px !important;
+      width: 100%;
+    }
+  }
+  .p-checkbox, .p-checkbox-box {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+

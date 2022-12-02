@@ -1,0 +1,20 @@
+@import "../../../assets/stylesheets/_variables.scss";
+
+:host ::ng-deep.login-wrapper {
+  //height: 100vh;
+  margin: 0;
+
+  li {
+    width: 100%;
+  }
+  .p-tabview-nav-link {
+    justify-content: center;
+  }
+  .signin-potions {
+    border-top: 2px solid $primary ;
+  }
+}
+
+.form {
+  border-radius: 10px;
+}

@@ -1,0 +1,87 @@
+@import "_variables.scss";
+
+.p-inputtext {
+    background: $white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+}
+
+.p-progressbar {
+    border-radius: 100px !important;
+    background: $lightenMore !important;
+    & .p-progressbar-value {
+        background-color: $primary !important;
+    }
+    & .p-progressbar-label {
+        display: none !important;
+    }
+}
+
+[_nghost-kqh-c74] {
+    background: $light !important;
+    border: 2px dashed $primary !important;
+}
+
+.p-tabview .p-tabview-panels {
+  padding: 0 !important;
+}
+
+input[type="checkbox" i] {
+  width: 20px;
+  height: 20px;
+}
+
+input[type='checkbox'] {
+  accent-color: $primary;
+}
+
+.p-rating .p-rating-icon.pi-star-fill {
+  color: $dark !important;
+}
+
+.p-rating .p-rating-icon:hover {
+  color: $dark !important;
+}
+
+.p-dialog {
+  text-align: center !important;
+}
+
+.p-dialog .p-dialog-header .p-dialog-title {
+  font-size: 30px !important;
+  margin-left: 20px;
+}
+
+.p-dialog {
+  & .p-dialog-header {
+    border-top-right-radius: 10px !important;
+    border-top-left-radius: 10px !important;
+  }
+  & .p-dialog-content {
+    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+  }
+}
+
+.p-progressbar {
+  height: 16px !important;
+}
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  background-color: $secondary !important;
+  color: $dark !important;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+  box-shadow: none !important;
+  border-bottom: none !important;
+}
+
+.p-dialog .p-dialog-content {
+  padding: 0 !important;
+}
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  border-color: $dark !important;
+}

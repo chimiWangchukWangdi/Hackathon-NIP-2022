@@ -1,0 +1,17 @@
+$widthSizes: 10, 12, 15, 20, 25, 30, 35, 40, 45, 48, 50, 60, 65, 70, 80, 87, 90, 100;
+
+@each $size in $widthSizes {
+
+  .w-#{$size} {
+    width: #{$size} + '%';
+  }
+}
+
+$heightSizes: 10, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100;
+
+@each $size in $heightSizes {
+
+  .h-#{$size} {
+    height: #{$size} + '%';
+  }
+}

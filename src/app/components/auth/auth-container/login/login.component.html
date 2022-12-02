@@ -1,0 +1,28 @@
+<form [formGroup]="signInForm">
+  <div fxLayout fxLayoutAlign="center center" class="login-wrapper bg--primary">
+      <div class="w-100 bg--white br-bl-4 br-br-4 pt-3">
+        <div class="p-24 mt-8">
+        <span class="p-float-label mb-28 fs-12">
+          <input id="float-email" formControlName="email" type="email" class="bg--grey" pInputText required>
+          <label for="float-email">Email address</label>
+        </span>
+          <span class="p-float-label mb-8">
+          <input id="float-password" type="password" formControlName="password" class="bg--grey" pInputText required>
+          <label for="float-password">Password</label>
+        </span>
+          <div class="p-field-checkbox my-16 fs-12">
+            <p-checkbox value="Remember me" inputId="ny" styleClass="w-12"></p-checkbox>
+            <label for="ny" class="ms-4">Remember me</label>
+          </div>
+          <button pButton type="button" label="Sign in" class="w-100 bg--primary" (click)="logIn()"></button>
+          <div fxLayoutAlign="center center" class="fs-10 mt-8 w-100">
+            <a>Forgot your password?</a>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="space-between" class="signin-potions p-24">
+          <button fxFlex="45" pButton type="button" label="Sign in with Facebook" class="bg--primary"></button>
+          <button fxFlex="45" pButton type="button" label="Sign in with Google" class="bg--primary"></button>
+        </div>
+      </div>
+    </div>
+</form>

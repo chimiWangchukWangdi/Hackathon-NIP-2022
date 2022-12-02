@@ -1,0 +1,32 @@
+@import "../../../assets/stylesheets/_variables.scss";
+
+.p-inputtext {
+  border: none !important;
+  border-radius: 50px !important;
+  box-shadow: none !important;
+  background-color: $secondary !important;
+}
+
+.article-title {
+  margin-bottom: -66px;
+}
+
+.petition {
+  &-post {
+    background-image: linear-gradient(rgba($blue, 0.7), rgba($blue, 0.75)),url("../../../assets/images/blog__background.png");
+    background-size: cover;
+    border-radius: 28px;
+  }
+  &-menu {
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: $dark;
+      color: $white;
+    }
+  }
+}
+
+.post {
+  gap: 60px;
+}

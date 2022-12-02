@@ -1,0 +1,47 @@
+<div class="w-100 blog">
+  <div class="w-100 bg-dark text-white py-60">
+    <div class="w-70 mx-auto" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="w-40">
+        <p class="my-20 fs-56 fw-700">{{blogPost.title}}</p>
+        <div fxLayout="row" fxLayoutGap="16" fxLayoutAlign="start center">
+          <img src="../../../assets/images/profile.png" alt="profile" width="50" height="50">
+          <div fxLayout="column">
+            <p class="m-0 fs-20 fw-400">Written by {{blogPost.user.name}}</p>
+            <p class="my-2 text-white-60">{{convertDate(blogPost.createdAt)}}</p>
+            <p class="my-2">{{blogPost.user.location.dzongkhag}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white w-50 rounded" fxLayout="column">
+        <img src="../../../assets/images/blog__image.png" alt="blog image">
+        <p class="fw-500 text-black text--center">This is the featured content slider action text.</p>
+      </div>
+    </div>
+  </div>
+  <div class="w-100 blog__content py-30">
+    <div class="w-60 mx-auto">
+      <p [innerHTML]="blogPost.description"></p>
+    </div>
+    <div class="w-60 mx-auto bg-light rounded">
+      <app-comment class="w-100" [refresh]="blogPostDetail()" [id]="blogPost._id" [type]="'blog'"></app-comment>
+      <div class="p-40">
+        <div class="w-100" fxLayout="row" fxLayoutAlign="space-between center">
+          <h2>Recent responses</h2>
+          <p class="text-primary cursor--pointer">+ Follow reactions</p>
+        </div>
+        <div fxLayout="column" fxLayoutGap="16">
+          <div class="rounded bg-white border--primary" *ngFor="let postComment of comments">
+            <div class="p-20 box--shadow-bottom" fxLayout="row" fxLayoutGap="10" fxLayoutAlign="start center">
+              <img src="{{postComment.user.profile}}" class="rounded--circle" alt="Profile picture"
+                   width="50" height="50">
+              <p class="text-primary fw-600">
+                {{postComment.user.name}} <span class="text-black fw-500"> commented on</span> 1:10pm 10 oct 2022
+              </p>
+            </div>
+            <p class="p-20 m-0">{{postComment.comment}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

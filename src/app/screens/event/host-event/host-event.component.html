@@ -1,0 +1,64 @@
+<div class="w-65 ms-180 my-58">
+  <div class="box--shadow ps-60 py-20 w-20 mb-58 br-4">
+    <p class="my-0 text-bold">BLANK APP</p>
+  </div>
+  <div class="box--shadow p-60 br-4">
+    <p class="fs-12 text--black-60">Home / Calender</p>
+    <div>
+      <h3>Post your event</h3>
+      <span class="p-float-label mb-28 fs-12">
+        <input id="headline" type="text" class="w-100 bg--grey" pInputText>
+        <label for="headline">Headline</label>
+      </span>
+      <div fxLayout="row" fxLayoutAlign="space-between" class="w-100">
+        <span class="p-float-label mb-28 fs-12 w-48">
+          <input id="event" type="text" class="w-100 bg--grey" pInputText>
+          <label for="event">When is the event?</label>
+        </span>
+        <span class="p-float-label mb-28 fs-12 w-48">
+          <input id="duration" type="text" class="w-100 bg--grey" pInputText>
+          <label for="duration">Event duration</label>
+        </span>
+      </div>
+    </div>
+    <div>
+      <h3>Contact info</h3>
+      <span class="p-float-label mb-28 fs-12">
+        <input id="full-name" type="text" class="w-100 bg--grey" pInputText>
+        <label for="full-name">Full name</label>
+      </span>
+      <span class="p-float-label mb-28 fs-12 w-48">
+        <input id="phone" type="text" class="w-48 bg--grey" pInputText>
+        <label for="phone">Phone</label>
+      </span>
+    </div>
+    <div class="mt-48">
+      <h3>Post your event</h3>
+      <div fxLayoutAlign="start center" class="p-field-checkbox my-16 fs-12">
+        <p-checkbox value="virtual event" styleClass=""></p-checkbox>
+        <label class="ms-4">This is a virtual event</label>
+      </div>
+      <span class="p-float-label mb-28 mt-28 fs-12">
+        <input id="country" type="text" class="w-100 bg--grey" pInputText>
+        <label for="country">Country</label>
+      </span>
+      <div fxLayout="row" fxLayoutAlign="space-between" class="w-100">
+        <span class="p-float-label mb-28 fs-12 w-48">
+          <input id="dzongkhag" type="text" class="w-100 bg--grey" pInputText>
+          <label for="dzongkhag">Dzongkhag</label>
+        </span>
+        <span class="p-float-label mb-28 fs-12 w-48">
+          <input id="address" type="text" class="w-100 bg--grey" pInputText>
+          <label for="address">Address</label>
+        </span>
+      </div>
+    </div>
+    <div>
+      <h3>Description, include direction</h3>
+      <p-editor [(ngModel)]="text1" [style]="{'height':'200px'}"></p-editor>
+    </div>
+    <div class="mt-58">
+      <button pButton type="button" label="Save and post" class="w-20 bg--primary"></button>
+    </div>
+  </div>
+</div>

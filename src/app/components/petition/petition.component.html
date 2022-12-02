@@ -1,0 +1,70 @@
+<div class="endorsement w-100 my-30" fxLayout="column" fxLayoutGap="60">
+  <div class="w-70 mx-auto" fxLayout="row" fxLayoutGap="60">
+    <div class="w-50">
+      <h1 class="fs-38">{{petition.title}}</h1>
+      <div fxLayout="row" fxLayoutGap="16" fxLayoutAlign="start center">
+        <img src="{{petition.user.profile}}" class="rounded--circle" alt="profile" width="50" height="50">
+        <div fxLayout="column">
+          <p class="m-0 fs-20 fw-400">Written by {{petition.user.name}}</p>
+          <p class="my-2">{{convertDate(petition.createdAt)}}</p>
+          <p class="my-2">{{petition.user.location.dzongkhag}}</p>
+        </div>
+      </div>
+      <div class="fs-24 w-80" [innerHTML]="petition.description"></div>
+    </div>
+    <div class="w-50 form">
+      <div class="p-32 box--shadow-bottom" fxLayout="column" fxLayoutGap="32">
+        <h2>Petition</h2>
+        <p class="fs-24 fw-600 m-0">{{petition.signatures.length}} signed so far. Help us get to {{petition.goal}}</p>
+        <p-progressBar value="50"></p-progressBar>
+      </div>
+      <form [formGroup]="signatureForm" (submit)="onFormSubmit(signatureForm)"class="p-32" fxLayout="column" fxLayoutGap="16">
+        <h2 class="fs-28 fw-600 m-0">Hi Adam, will you sign?</h2>
+        <div class="w-100" fxLayout="row" fxLayoutGap="16">
+          <input class="fs-18 w-50 p-16 rounded bg-secondary border--none" type="text" formControlName="name"  placeholder="Name">
+          <input class="fs-18 w-50 p-16 rounded bg-secondary border--none" type="text" formControlName="email"  placeholder="Email">
+        </div>
+        <input class="fs-18 w-100 p-16 rounded bg-secondary border--none" type="text" formControlName="address"  placeholder="Address">
+        <textarea cols="30" rows="5" class="fs-18 bg-secondary p-16 border--none rounded" formControlName="comments"  placeholder="Comments (optional)"></textarea>
+        <div fxLayout="row" fxLayoutGap="16" fxLayoutAlign="start center">
+          <p-checkbox value="New York"></p-checkbox>
+          <label>Send me email updates</label>
+        </div>
+        <button class="btn-primary">Add Signature</button>
+      </form>
+      <div class="px-32 py-16 mb-10 bg-light">
+        <div fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="16">
+          <img src="../../../assets//images//profile.png" alt="Profile picture"
+               width="40" height="40" *ngFor="let number of [0,1,2,3,4,5,6,7,8,9]"
+               class="cursor--pointer">
+        </div>
+        <p class="fw-600 my-14" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10">
+          <i class="pi pi-check p-4 rounded--circle border" style="font-size: 10px"></i>
+          <span class="text--black-75">100 people</span>
+          have signed the petition</p>
+      </div>
+    </div>
+  </div>
+  <div class="w-60 mx-auto" fxLayout="column" fxLayoutAlign="center center">
+    <app-comment class="w-100" [refresh]="petitionDetail()" [id]="petition._id" [type]="'petition'"></app-comment>
+    <div class="w-100 bg-light py-20">
+      <div class="w-100 px-60" fxLayout="row" fxLayoutAlign="space-between">
+        <h2 class="fw-500">Recent responses</h2>
+        <p class="text-primary cursor--pointer">+ Follow reactions</p>
+      </div>
+      <div class="w-100 px-60" fxLayout="column" fxLayoutGap="20">
+        <div class="border--primary rounded bg-white" *ngFor="let response of comments">
+          <div class="p-20 box--shadow-bottom" fxLayout="row" fxLayoutGap="10" fxLayoutAlign="start center">
+            <img src="{{response.user.profile}}" class="rounded--circle" alt="Profile picture"
+                 width="50" height="50">
+            <p class="text-primary fw-600">
+              {{response.user.name}}<span class="text-black fw-500"> commented on</span>
+            </p>
+            <p>{{convertDate(response.time)}}</p>
+          </div>
+          <p class="p-20 m-0">{{response.comment}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

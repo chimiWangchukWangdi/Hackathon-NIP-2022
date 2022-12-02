@@ -1,0 +1,208 @@
+@import "_variables.scss";
+
+$fontWeights: 300, 400, 500, 600, 700, 800;
+
+@each $size in $fontWeights {
+
+  .fw-#{$size} {
+    font-weight: #{$size};
+  }
+}
+
+.btn {
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    text-wrap: none;
+    &:hover {
+        opacity: 0.9;
+    }
+    &-primary {
+        @extend .btn;
+        background-color: $primary;
+        color: $white;
+        border: none;
+    }
+    &-outline-primary {
+        @extend .btn;
+        background-color: $white;
+        border: 1px solid $primary;
+        color: $primary;
+    }
+  &-violet {
+    @extend  .btn;
+    background-color: $violet;
+    border: none;
+    color: $white;
+  }
+    &-dark {
+        @extend .btn;
+        background-color: $dark;
+        color: $white;
+        border: none;
+    }
+    &-outline-dark {
+        @extend .btn;
+        background-color: $white;
+        color: $dark;
+        border: 1px solid $dark;
+        transition: 0.2s ease-in-out;
+        &:hover {
+            background-color: $dark;
+            color: $white;
+        }
+    }
+    &-lighten {
+        @extend .btn;
+        background-color: $lighten;
+        color: $primary;
+        border: none;
+    }
+    &-lighten-more {
+        @extend .btn;
+        background-color: $lightenMore;
+        color: $primary;
+        border: none;
+    }
+  &-black {
+    @extend .btn;
+    background-color: $black;
+    color: $white;
+    border: none;
+  }
+}
+
+.text {
+    &-primary {
+        color: $primary;
+    }
+    &-darken {
+        color: $darken;
+    }
+    &-black {
+        color: $black;
+    }
+    &-white {
+      color: $white;
+    }
+    &-white-60 {
+      color: rgba($white, 0.6);
+    }
+      &--black-75 {
+          color: rgba($black, 0.75);
+      }
+    &--violet {
+      color: $violet;
+    }
+    &--center {
+        text-align: center;
+    }
+}
+
+.cursor--pointer {
+    cursor: pointer;
+}
+
+.border {
+    border: 1px solid $black !important;
+    &--primary {
+        border: 2px solid $primary !important;
+    }
+    &--secondary {
+        border: 1px solid $secondary;
+    }
+    &--10 {
+        border: 10px solid $black;
+    }
+    &--none {
+      border: 0;
+    }
+  &--light-blue {
+    border: 2px solid $light-blue;
+  }
+}
+
+.rounded {
+    border-radius: 4px;
+    &--md {
+        border-radius: 28px;
+    }
+    &--lg {
+        border-radius: 50px;
+    }
+    &--circle {
+        border-radius: 50%;
+    }
+}
+
+.bg {
+    &-primary {
+        background-color: $primary;
+    }
+    &-secondary {
+        background-color: $secondary;
+    }
+    &-black {
+        background-color: $black;
+    }
+    &-black-95 {
+      background-color: rgba($black, 0.95);
+    }
+    &-white {
+        background-color: $white;
+    }
+    &-light {
+        background-color: $light;
+    }
+    &-lighten {
+        background-color: $lighten;
+    }
+    &-lighten-more {
+        background-color: $lightenMore;
+    }
+    &-dark {
+      background-color: $dark;
+    }
+  &-blue {
+    background-color: $blue;
+  }
+  &-light-blue {
+    background-color: $light-blue;
+  }
+  &-light-violet {
+    background-color: $light-violet;
+  }
+  &-pink {
+    background-color: $pink;
+  }
+}
+
+.box--shadow-bottom {
+    box-shadow: inset 0 -1px 0 rgba($black, 0.12);
+}
+
+.box--shadow {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.position {
+    &--relative {
+        position: relative;
+    }
+    &--absolute {
+        position: absolute;
+    }
+    &--fixed {
+        position: fixed;
+    }
+    &--sticky {
+        position: sticky !important;
+        top: 0;
+    }
+}
+
+.z-index {
+  z-index: 9999;
+}

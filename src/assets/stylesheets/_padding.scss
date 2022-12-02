@@ -1,0 +1,28 @@
+$paddingSizes: 0, 2, 3, 4, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 44, 46, 48, 50, 54, 56, 60, 80, 86, 100, 180;
+
+@each $size in $paddingSizes {
+
+  .p-#{$size} {
+    padding: #{$size} + 'px';
+  }
+  .px-#{$size} {
+    padding-right: #{$size} + 'px';
+    padding-left: #{$size} + 'px';
+  }
+  .py-#{$size} {
+    padding-top: #{$size} + 'px';
+    padding-bottom: #{$size} + 'px';
+  }
+  .ps-#{$size} {
+    padding-left: #{$size} + 'px';
+  }
+  .pe-#{$size} {
+    padding-right: #{$size} + 'px';
+  }
+  .pt-#{$size} {
+    padding-top: #{$size} + 'px';
+  }
+  .pb-#{$size} {
+    padding-bottom: #{$size} + 'px';
+  }
+}

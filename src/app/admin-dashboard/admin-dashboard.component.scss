@@ -1,0 +1,26 @@
+@import "../../assets/stylesheets/_variables.scss";
+
+.side-nav {
+  border-right: 2px solid rgba(0, 0, 0, 0.09);
+}
+.admin__nav {
+  border-radius: 4px;
+  transition: 0.2s ease-in-out;
+  &:hover, &:focus {
+    font-weight: 600;
+    background-color: $secondary;
+    padding-left: 8px;
+  }
+}
+
+.cards {
+  border-radius: 10px;
+}
+
+td, th {
+  width: 100%;
+}
+
+.user-data:hover {
+  background-color: $black-06;
+}

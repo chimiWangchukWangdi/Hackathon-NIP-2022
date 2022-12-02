@@ -1,0 +1,9 @@
+@import "../../../assets/stylesheets/_variables.scss";
+
+.dropzone {
+  border: 2px dashed $primary;
+  &__container {
+    background: $lightenMore !important;
+    border: none;
+  }
+}

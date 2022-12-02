@@ -1,0 +1,40 @@
+<nav class="nav bg-white w-100 px-48 py-20 fs-18 fw-700 box--shadow-bottom" fxLayout="row" fxLayoutAlign="space-between center">
+  <ul class="m-0 p-0" fxLayout="row" fxLayoutGap="30" fxLayoutAlign="start center">
+    <img src="../../../assets/images/logo.svg" class="cursor--pointer" alt="logo" width="127" height="79">
+    <li class="nav__menu py-12 px-16" routerLink="/home">Home</li>
+    <li class="nav__menu py-12 px-16" routerLink="/endorsement">Innovative Solutions</li>
+    <li class="nav__menu py-12 px-16" routerLink="/petition">Petitions</li>
+    <li class="nav__menu py-12 px-16" routerLink="/blog">Blogs</li>
+    <li class="nav__menu py-12 px-16" routerLink="/people">People</li>
+  </ul>
+  <div fxLayout="row" fxLayoutGap="30" fxLayoutAlign="center center">
+    <p class="nav__menu cursor--pointer py-12" (click)="showModalDialog()" *ngIf="session">Create Post</p>
+    <p-dialog header="Choose Post Type" [(visible)]="displayModal" [modal]="true" [style]="{width: '45vw'}" [baseZIndex]="10000" [draggable]="false" [resizable]="false">
+      <div class="w-100 py-50 px-40" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="40">
+        <div class="rounded--md w-30 cards cursor--pointer transition text--center p-18 border--secondary" routerLink="/create-petition" (click)="hideModalDialog()">
+          <p class="text-black">Petitions</p>
+          <img src="../../../assets/images/petition.svg" alt="petition" width="90" height="90">
+          <p class="text-primary">Post your problem statements</p>
+        </div>
+        <div class="rounded--md w-30 cards cursor--pointer transition text--center p-18 border--secondary" routerLink="/create-post" (click)="hideModalDialog()">
+          <p class="text-black">Blogs</p>
+          <img src="../../../assets/images/solution.svg" alt="petition" width="90" height="90">
+          <p class="text-primary">Post your innovation journey</p>
+        </div>
+        <div class="rounded--md w-30 cards cursor--pointer transition text--center p-18 border--secondary" routerLink="/create-endorsement" (click)="hideModalDialog()">
+          <p class="text-black">Innovative Solutions</p>
+          <img src="../../../assets/images/endorsement.svg" alt="petition" width="100" height="90">
+          <p class="text-primary">Post your ideas</p>
+        </div>
+      </div>
+    </p-dialog>
+    <p class="nav__menu cursor--pointer py-12" (click)="showLoginDialog()">Login</p>
+    <p-dialog header="" [(visible)]="displayLogin" [modal]="true" [style]="{width: '30vw'}" [draggable]="false" [resizable]="false">
+      <app-auth ></app-auth>
+    </p-dialog>
+    <div class="cursor--pointer box--shadow px-12 br-4" fxLayout="row" fxLayoutGap="8" fxLayoutAlign="center center" routerLink="/user/{{userId}}" *ngIf="session">
+      <img src="{{profile}}" class="rounded--circle" alt="profile" width="34" height="34">
+      <p>{{userName}}</p>
+    </div>
+  </div>
+</nav>

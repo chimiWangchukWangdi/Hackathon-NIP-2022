@@ -1,0 +1,42 @@
+<form [formGroup]="signUpForm">
+  <div fxLayoutAlign="center center" class="login-wrapper bg--primary">
+      <div class="bg--white w-100 br-bl-4 br-br-4 pt-3">
+        <div class="p-24 mt-8">
+        <span class="p-float-label mb-28 fs-12">
+          <input formControlName="name" id="name" type="text" class="bg--grey" pInputText required>
+          <label for="name">Name</label>
+        </span>
+          <span class="p-float-label mb-28 fs-12">
+          <input formControlName="email" id="email" type="email" class="bg--grey" pInputText required>
+          <label for="email">Email address</label>
+        </span>
+        <span class="p-float-label mb-28 fs-12">
+          <input formControlName="password" id="password" type="password" class="bg--grey" pInputText required>
+          <label for="password">Password</label>
+        </span>
+        <span class="p-float-label mb-28 fs-12">
+          <input formControlName="password" id="repeatPassword" type="password" class="bg--grey" pInputText required>
+          <label for="repeatPassword">Repeat Password</label>
+        </span>
+        <span class="p-float-label mb-28 fs-12">
+          <input formControlName="contact" id="contact" type="text" class="bg--grey" pInputText required>
+          <label for="contact">Contact</label>
+        </span>
+        <span class="p-float-label mb-28 fs-12">
+          <input formControlName="gender" id="gender" type="text" class="bg--grey" pInputText required>
+          <label for="gender">Gender</label>
+        </span>
+        <span class="p-float-label mb-28 fs-12">
+          <input formControlName="userType" id="user-type" type="text" class="bg--grey" pInputText required>
+          <label for="user-type">User Type</label>
+        </span>
+        <button pButton type="button" label="Sign Up" (click)="signUp()" class="w-100 bg--primary"></button>
+
+      </div>
+<!--        <div fxLayout="row wrap" fxLayoutAlign="space-between" class="signin-potions p-24">-->
+<!--          <button fxFlex="45" pButton type="button" label="Sign up with Facebook" class="bg&#45;&#45;primary"></button>-->
+<!--          <button fxFlex="45" pButton type="button" label="Sign up with Google" class="bg&#45;&#45;primary"></button>-->
+<!--        </div>-->
+      </div>
+    </div>
+</form>

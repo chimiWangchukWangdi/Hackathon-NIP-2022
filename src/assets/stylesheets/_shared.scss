@@ -1,0 +1,19 @@
+@mixin boxModel($values, $className, $direction) {
+  @each $size in $values {
+    @if $size < 0 {
+      #{'.'+$className +'-'+'N'+-$size} {
+        @each $property in $direction {
+          #{$property}: #{$size * 0.0625}rem !important;
+        }
+      }
+    }
+
+    @else {
+      #{'.'+$className +'-'+ $size} {
+        @each $property in $direction {
+          #{$property}: #{$size * 0.0625}rem !important;
+        }
+      }
+    }
+  }
+}

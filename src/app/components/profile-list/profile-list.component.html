@@ -1,0 +1,30 @@
+<div class="w-100 my-40">
+  <div class="w-80 mx-auto" fxLayout="row" fxLayoutAlign="space-between center">
+    <h1>Discover Innovators</h1>
+    <span fxLayout="row" fxLayoutAlign="start center">
+      <i class="pi pi-search position--absolute text--black-75 ms-16"></i>
+      <input type="text" class="bg-secondary px-50 rounded--md" placeholder="Search">
+    </span>
+  </div>
+  <div class="w-80 mx-auto">
+    <div class="w-100" fxLayout="row wrap" fxLayoutAlign="start">
+      <div class="p-28 card transition mt-40 me-40 w-20 form"*ngFor="let profile of userProfiles">
+        <div>
+          <div fxLayout="row" fxLayoutAlign="space-between center">
+            <a [routerLink]="['/user', profile._id]">See more</a>
+            <p class="text-primary fw-600"><i class="pi pi-plus me-10" style="font-size: 14px; font-weight: 600"></i>Follow</p>
+          </div>
+          <div class="w-100 text--center">
+            <img src="{{profile.profile}}" class="rounded--circle" alt="profile" width="100" height="100">
+          </div>
+          <p class="fw-500 fs-28 text--center">{{profile.name}}</p>
+          <p class="text--black-75">{{profile.bio}}</p>
+          <div>
+            <p class="text-primary" fxLayout="row" fxLayoutAlign="start center"><i class="pi pi-file me-16" ></i> {{profile.posts}}</p>
+            <p class="text-primary" fxLayout="row" fxLayoutAlign="start center"><i class="pi pi-eye me-16" ></i> {{profile.views}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,221 @@
+<!--<div class="px-60 my-30 w-100">-->
+<!--  <div class="w-70 mx-auto" fxLayout="row" fxLayoutGap="60" fxLayoutAlign="center">-->
+<!--    <div class="form w-50 py-30 px-100" fxLayout="column" fxLayoutGap="10" fxLayoutAlign="center center">-->
+<!--      <img src="{{userDetail.profile}}" alt="profile" width="100" height="100">-->
+<!--      <p class="fs-28 fw-500 m-0">{{userDetail.name}}</p>-->
+<!--      <p class="text-primary fs-20">{{userDetail.bio}} </p>-->
+<!--      <p class="text-primary fs-20">{{userDetail.contact}} </p>-->
+<!--      <p class="text&#45;&#45;violet fs-28 fw-700 cursor&#45;&#45;pointer my-20" (click)="showProfileDialog()">Edit your profile</p>-->
+<!--      <p-dialog header="Your Profile" [(visible)]="displayProfile" [modal]="true" [style]="{width: '30vw'}" [draggable]="false" [resizable]="false">-->
+<!--        <div fxLayout fxLayoutAlign="center center" class="login-wrapper">-->
+<!--          <div class="w-100">-->
+<!--            <div class="bg&#45;&#45;white rounded w-100">-->
+<!--              <p-tabView>-->
+<!--                <p-tabPanel header="Profile">-->
+<!--                  <form>-->
+<!--                    <div class="p-40 rounded">-->
+<!--                      <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Name">-->
+<!--                      <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Gender">-->
+<!--                      <input type="email" class="bg-secondary fs-18 w-100 mb-20" placeholder="Email">-->
+<!--                      <div class="w-100" fxLayout="column" fxLayoutAlign="start start">-->
+<!--                        <p>Profile image</p>-->
+<!--                        <div class="w-100" fxLayout="row" fxLayoutGap="16" fxLayoutAlign="start center">-->
+<!--                          <img src="../../../assets/images/profile.png" alt="profile" width="64" height="64">-->
+<!--                          <div class="bg-secondary w-100 rounded">-->
+<!--                            <input type="file">-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                      <button class="w-100 btn-primary my-20">Save public settings</button>-->
+<!--                    </div>-->
+<!--                  </form>-->
+<!--                </p-tabPanel>-->
+<!--                <p-tabPanel header="Bio">-->
+<!--                  <form class="bg&#45;&#45;white rounded">-->
+<!--                    <div class="p-40">-->
+<!--                      <textarea rows="4" type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Short bio"></textarea>-->
+<!--                      <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Website">-->
+<!--                      <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Headline for your profile">-->
+<!--                      <textarea rows="4" type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Why do you support this webiste?"></textarea>-->
+<!--                      <button class="w-100 btn-primary">Save public settings</button>-->
+<!--                    </div>-->
+<!--                  </form>-->
+<!--                </p-tabPanel>-->
+<!--                <p-tabPanel header="Settings">-->
+<!--                  <form class="bg&#45;&#45;white rounded">-->
+<!--                    <div class="p-40">-->
+<!--                      <input type="email" class="bg-secondary fs-18 w-100 mb-20" placeholder="Email">-->
+<!--                      <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Mobile">-->
+<!--                      <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="CID">-->
+<!--                      <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Dzongkhag">-->
+<!--                      <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Gewog">-->
+<!--                      <button class="w-100 btn-primary">Save public settings</button>-->
+<!--                    </div>-->
+<!--                  </form>-->
+<!--                </p-tabPanel>-->
+<!--              </p-tabView>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </p-dialog>-->
+<!--    </div>-->
+<!--    <div class="w-50">-->
+<!--      <h1>Profile headline</h1>-->
+<!--      <p class="fs-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam-->
+<!--        at tempus erat. Vestibulum vehicula malesuada malesuada. Phasellus mattis eu turpis.-->
+<!--      </p>-->
+<!--      <p class="fw-600 fs-20">Engagement</p>-->
+<!--      <p-progressBar value="30"></p-progressBar>-->
+<!--      <button class="btn-primary my-20">Donate</button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="w-70 mx-auto">-->
+<!--    <h1>Your Posts</h1>-->
+<!--    <div class="w-100 mx-auto post" fxLayout="row wrap" fxLayoutAlign="space-between">-->
+<!--      <div class="post-cards position&#45;&#45;relative" fxLayout="column" fxLayoutGap="20" fxLayoutAlign="center" *ngFor="let post of posts">-->
+<!--        <img src="{{userPost.image}}" class="position&#45;&#45;relative" width="100%" height="420" alt="post cover">-->
+<!--        <div class="post__chip bg-white pe-12 rounded&#45;&#45;lg position&#45;&#45;absolute cursor&#45;&#45;pointer" fxLayout="row" fxLayoutGap="12" fxLayoutAlign="start center" fxFlexAlign="center">-->
+<!--          <img src="../../../assets/images/profile.png" width="40" height="40" alt="profile">-->
+<!--          <p class="text-primary">Karma Tenzin</p>-->
+<!--        </div>-->
+<!--        <div class="position&#45;&#45;absolute bg-white px-4 pt-4 pb-0 rounded&#45;&#45;lg cursor&#45;&#45;pointer bookmark m-16">-->
+<!--          <i class="pi pi-heart-fill" style="font-size: 24px"></i>-->
+<!--        </div>-->
+<!--        <h2 class="fs-28 m-0">{{post.title}}</h2>-->
+<!--        <p class="text-primary fs-20 box&#45;&#45;shadow-bottom m-0 pb-20">{{post.description}}</p>-->
+<!--        <div class="text-primary" fxLayout="row" fxLayoutAlign="space-between center">-->
+<!--          <p class="m-0" fxLayout="row" fxLayoutAlign="start center">-->
+<!--            <i class="pi pi-calendar me-16" ></i>-->
+<!--            {{post.date}}-->
+<!--          </p>-->
+<!--          <p class="m-0" fxLayout="row" fxLayoutAlign="start center">-->
+<!--            <i class="pi pi-eye me-16" ></i>-->
+<!--            {{post.views}}-->
+<!--          </p>-->
+<!--        </div>-->
+<!--        <button class="btn-outline-dark rounded&#45;&#45;lg">Read More</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<div class="my-30 w-100">
+  <div class="w-70 mx-auto" fxLayout="column" fxLayoutGap="60" fxLayoutAlign="center">
+    <div class="form w-100">
+      <div class="bg-light-blue rounded px-100 py-30" fxLayout="row"fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutGap="30" fxLayoutAlign="start center">
+          <img src="{{userDetail.profile}}" class="rounded--circle border--primary" alt="profile" width="100" height="100">
+          <div>
+            <p class="fs-28 fw-500 m-0">{{userDetail.name}}</p>
+            <p class="text-primary my-4 fs-18"><i class="pi pi-map-marker me-4"></i>Thimphu, Bhutan</p>
+          </div>
+        </div>
+        <button class="btn-primary my-20" (click)="showProfileDialog()" *ngIf="id == userId">Edit</button>
+        <button class="btn-primary my-20" (click)="showProfileDialog()" *ngIf="id != userId">Follow</button>
+      </div>
+      <div class="w-100 px-100" fxLayout="row" fxLayoutAlign="space-between center">
+        <p class="fs-20 w-70">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          at tempus erat. Vestibulum vehicula malesuada malesuada. Phasellus mattis eu turpis.</p>
+        <div class="w-30 py-30" fxLayout="row" fxLayoutAlign="space-between center">
+          <div>
+            <p class="fs-26 my-8 text--center">10</p>
+            <p class="my-0 fw-600 fs-18"><i class="pi pi-users me-10" style="font-size: 20px; font-weight: 600"></i>Followers</p>
+          </div>
+          <div>
+            <p class="fs-26 my-8 text--center">10</p>
+            <p class="my-0 fw-600 fs-18"><i class="pi pi-file-edit me-10" style="font-size: 20px; font-weight: 600"></i>Posts</p>
+          </div>
+          <div>
+            <p class="fs-26 my-8 text--center">10</p>
+            <p class="my-0 fw-600 fs-18"><i class="pi pi-play me-10" style="font-size: 20px; font-weight: 600"></i>Views</p>
+          </div>
+        </div>
+        <p-dialog header="Your Profile" [(visible)]="displayProfile" [modal]="true" [style]="{width: '30vw'}" [draggable]="false" [resizable]="false">
+          <div fxLayout fxLayoutAlign="center center" class="login-wrapper">
+            <div class="w-100">
+              <div class="bg--white rounded w-100">
+                <p-tabView>
+                  <p-tabPanel header="Profile">
+                    <form>
+                      <div class="p-40 rounded">
+                        <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Name">
+                        <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Gender">
+                        <input type="email" class="bg-secondary fs-18 w-100 mb-20" placeholder="Email">
+                        <div class="w-100" fxLayout="column" fxLayoutAlign="start start">
+                          <p>Profile image</p>
+                          <div class="w-100" fxLayout="row" fxLayoutGap="16" fxLayoutAlign="start center">
+                            <img src="../../../assets/images/profile.png" alt="profile" width="64" height="64">
+                            <div class="bg-secondary w-100 rounded">
+                              <input type="file">
+                            </div>
+                          </div>
+                        </div>
+                        <button class="w-100 btn-primary my-20">Save public settings</button>
+                      </div>
+                    </form>
+                  </p-tabPanel>
+                  <p-tabPanel header="Bio">
+                    <form class="bg--white rounded">
+                      <div class="p-40">
+                        <textarea rows="4" type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Short bio"></textarea>
+                        <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Website">
+                        <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Headline for your profile">
+                        <textarea rows="4" type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Why do you support this webiste?"></textarea>
+                        <button class="w-100 btn-primary">Save public settings</button>
+                      </div>
+                    </form>
+                  </p-tabPanel>
+                  <p-tabPanel header="Settings">
+                    <form class="bg--white rounded">
+                      <div class="p-40">
+                        <input type="email" class="bg-secondary fs-18 w-100 mb-20" placeholder="Email">
+                        <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Mobile">
+                        <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="CID">
+                        <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Dzongkhag">
+                        <input type="text" class="bg-secondary fs-18 w-100 mb-20" placeholder="Gewog">
+                        <button class="w-100 btn-primary">Save public settings</button>
+                      </div>
+                    </form>
+                  </p-tabPanel>
+                </p-tabView>
+              </div>
+            </div>
+          </div>
+        </p-dialog>
+      </div>
+      <div class="w-50 px-100">
+        <h1 class="mt-50">User Profile</h1>
+        <p class="fs-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          at tempus erat. Vestibulum vehicula malesuada malesuada. Phasellus mattis eu turpis.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="w-70 mx-auto">
+    <h1>Your Posts</h1>
+    <div class="w-100 mx-auto post" fxLayout="row wrap" fxLayoutAlign="space-between">
+      <div class="post-cards position--relative" fxLayout="column" fxLayoutGap="20" fxLayoutAlign="center" *ngFor="let post of posts">
+        <img src="{{post.image}}" class="position--relative" width="100%" height="420" alt="post cover">
+        <div class="post__chip bg-white pe-12 rounded--lg position--absolute cursor--pointer" fxLayout="row" fxLayoutGap="12" fxLayoutAlign="start center" fxFlexAlign="center">
+          <img src="{{post.user.profile}}" width="40" height="40" alt="profile">
+          <p class="text-primary">{{post.user.name}}</p>
+        </div>
+        <div class="position--absolute bg-white px-4 pt-4 pb-0 rounded--lg cursor--pointer bookmark m-16">
+          <i class="pi pi-heart-fill" style="font-size: 24px"></i>
+        </div>
+        <h2 class="fs-28 m-0">{{post.title}}</h2>
+        <div class="text-primary fs-20 box--shadow-bottom m-0 pb-20 elipses" [innerHTML]="post.description"></div>
+        <div class="text-primary" fxLayout="row" fxLayoutAlign="space-between center">
+          <p class="m-0" fxLayout="row" fxLayoutAlign="start center">
+            <i class="pi pi-calendar me-16" ></i>
+            16/10/2022
+          </p>
+          <p class="m-0" fxLayout="row" fxLayoutAlign="start center">
+            <i class="pi pi-eye me-16" ></i>
+            19 Views
+          </p>
+        </div>
+        <button class="btn-outline-dark rounded--lg">Read More</button>
+      </div>
+    </div>
+  </div>
+</div>

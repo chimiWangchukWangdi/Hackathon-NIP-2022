@@ -1,0 +1,36 @@
+@import "../../../assets/stylesheets/_variables.scss";
+
+.card {
+  cursor: pointer;
+  border-radius: 10px;
+  &:hover {
+    border: 1px solid $primary;
+    box-shadow: -1px 27px 51px -34px rgba(108,117,132,0.48);
+    -webkit-box-shadow: -1px 27px 51px -34px rgba(108,117,132,0.48);
+    -moz-box-shadow: -1px 27px 51px -34px rgba(108,117,132,0.48);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+:host ::ng-deep.login-wrapper {
+  //height: 100vh;
+  margin: 0;
+
+  li {
+    width: 100%;
+  }
+  .p-tabview-nav-link {
+    justify-content: center;
+  }
+  .signin-potions {
+    border-top: 2px solid $primary ;
+  }
+}
+

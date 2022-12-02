@@ -1,0 +1,102 @@
+<div fxLayout="column" class="pb-24">
+  <div class="bg--charcoal ps-40 py-20 color--white">
+    <p class="my-0">Home / calender</p>
+    <h1>This is the event title headline</h1>
+    <div>
+      <div fxLayout="row" fxLayoutAlign="start center" class="br-4">
+        <div class="me-8">
+          <p class="br-tl-4 br-tr-4 px-12 bg--red my-0">APR</p>
+          <p fxLayoutAlign="center center" class="br-bl-4 br-br-4 px-12 text-bold py-8 bg--white my-0 color--dark">8</p>
+        </div>
+        <p>Thursday, April 8, 2022 at  6:00 PM</p>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column">
+    <div fxLayout="row">
+      <div fxFlex="30" class="bg--lightenMore br-4 p-14 mt-54 ms-180">
+        <div fxFlex="50" fxLayout="column wrap" class="location px-8">
+          <div>
+            <i class="pi pi-map-marker me-4"></i>
+            <span>Location</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, commodi dolores ex expedita iusto laudantium nostrum odit temporibus voluptate voluptatum?</p>
+        </div>
+        <div fxFlex="50" fxLayout="column wrap" class="px-8">
+          <div>
+            <i class="pi pi-user me-4"></i>
+            <span>Event contact</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, commodi dolores ex expedita iusto laudantium nostrum odit temporibus voluptate voluptatum?</p>
+        </div>
+      </div>
+    </div>
+    <div  fxLayout="row">
+      <div class="ms-180" fxFlex="30">
+        <h3 class="mb-0 mt-38">Event details</h3>
+        <p class="my-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque eius molestias nisi tempore vitae? A at beatae cumque ducimus, et labore natus nesciunt quis reprehenderit, tempora tempore ut voluptatem voluptates?</p>
+      </div>
+    </div>
+  </div>
+  <div fxLayoutAlign="center center" class="w-100 mt-500">
+    <div class="bg--lightenMore w-50 p-24 br-4">
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <p class="mt-0 mb-32">Be the first to comment</p>
+        <div fxLayoutAlign="center center" class="mt-0 mb-32">
+          <i class="pi pi-plus me-4"></i>
+          <span>Follow reactions</span>
+        </div>
+      </div>
+      <span class="p-float-label">
+        <input id="float-input" type="text" class="w-100" pInputText>
+        <label for="float-input">Write your response...</label>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div fxLayout="row" class="event-form br-4 w-40">
+  <div fxLayout="column" fxLayoutAlign="center center" class="w-100">
+    <img src="https://images.unsplash.com/photo-1463947628408-f8581a2f4aca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c2t5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" class="w-100">
+    <p fxLayoutAlign="center" class="w-100 py-4 my-0 bg--seashell">This is the featured content slider action text.</p>
+    <div class="bg--white event-form__input py-18 px-24">
+      <p>Hi, will you come?</p>
+      <span class="p-float-label mb-28 fs-12">
+              <input formControlName="name"  type="text" class="bg--grey" pInputText>
+              <label for="float-email">name</label>
+      </span>
+      <span class="p-float-label mb-28 fs-12">
+              <input formControlName="email" type="email" class="bg--grey" pInputText>
+              <label for="float-email">Email address</label>
+      </span>
+      <span class="p-float-label mb-28 fs-12">
+              <input formControlName="gender" type="email" class="bg--grey" pInputText>
+              <label for="float-email">gender</label>
+      </span>
+      <span class="p-float-label mb-28 fs-12">
+              <input id="float-email" type="email" class="bg--grey" pInputText>
+              <label for="float-email">Email address</label>
+      </span>
+      <span class="p-float-label mb-28 fs-12">
+              <input id="float-email" type="email" class="bg--grey" pInputText>
+              <label for="float-email">Email address</label>
+      </span>
+      <span class="p-float-label mb-28 fs-12">
+              <input id="float-email" type="email" class="bg--grey" pInputText>
+              <label for="float-email">Email address</label>
+      </span>
+      <div class="p-field-checkbox my-16 fs-12">
+        <p-checkbox value="Remember me" styleClass="w-12"></p-checkbox>
+        <label class="ms-4">I want to volunteer</label>
+      </div>
+      <button pButton type="button" label="Send RSVP" class="w-100 bg--primary"></button>
+      <p-avatarGroup label="P" styleClass="mt-8">
+        <p-avatar size="xlarge" image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" shape="circle"></p-avatar>
+        <p-avatar size="xlarge" image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" shape="circle"></p-avatar>
+        <p-avatar size="xlarge" image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" shape="circle"></p-avatar>
+        <p-avatar size="xlarge" image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" shape="circle"></p-avatar>
+        <p-avatar size="xlarge" label="+2" shape="circle"></p-avatar>
+      </p-avatarGroup>
+    </div>
+  </div>
+</div>

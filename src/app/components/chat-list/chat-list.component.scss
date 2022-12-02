@@ -1,0 +1,17 @@
+@import "../../../assets/stylesheets/_variables.scss";
+
+.chat-list {
+  height: 40vh;
+  position: relative;
+  overflow-y: scroll;
+  z-index: 1;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  .chats:hover {
+    background-color: $secondary;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}

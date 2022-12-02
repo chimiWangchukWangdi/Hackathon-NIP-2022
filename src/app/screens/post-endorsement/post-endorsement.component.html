@@ -1,0 +1,52 @@
+<div class="w-100 post my-40">
+  <app-share></app-share>
+    <form [formGroup]="endorsementForm" (submit)="onFormSubmit(endorsementForm)" class="w-50 p-60 mx-auto form" fxLayout="column" fxLayoutGap="16">
+        <div class="w-100">
+            <h2 class="fs-28">Post your endorsement</h2>
+            <input type="text" class="w-100 fs-18 bg-secondary border--none rounded p-16" formControlName="title" placeholder="Headline*">
+        </div>
+        <div class="w-100">
+            <h3 class="fs-22">Goal</h3>
+            <input type="number" class="w-50 fs-18 bg-secondary border--none rounded p-16" formControlName="goal" placeholder="eg.500">
+        </div>
+        <div class="w-100">
+            <h3 class="fs-22">Description*</h3>
+            <p-editor [style]="{'height':'200px'}" formControlName="description"></p-editor>
+        </div>
+        <div>
+            <h3>Category</h3>
+            <div fxLayout="row wrap" fxLayoutGap="30">
+                <div class="my-10" fxLayout="row" fxLayoutGap="16" fxLayoutAlign="start center"
+                *ngFor="let number of categories">
+                    <input type="checkbox">
+                    <label>{{number}}</label>
+                </div>
+            </div>
+        </div>
+      <div>
+        <h3>Looking For collaborator?</h3>
+        <div class="my-10" fxLayout="row" fxLayoutGap="10" fxLayoutAlign="start center">
+          <div fxLayout="row" fxLayoutGap="16" fxLayoutAlign="start center">
+            <input type="checkbox" checked id="checked" (click)="checked()">
+            <label>Yes</label>
+          </div>
+        </div>
+        <div id="partnerForm" class="partner__form my-16" fxLayout="column" fxLayoutGap="16">
+          <input type="text" class="w-50 fs-18 bg-secondary border--none rounded p-16" placeholder="Title for the role">
+          <textarea cols="30" rows="5" class="w-50 fs-18 bg-secondary p-16 border--none rounded" placeholder="Description of the role"></textarea>
+        </div>
+      </div>
+        <div>
+            <h3>File upload</h3>
+            <div class="dropzone bg-secondary py-80 rounded text--center">
+              <input
+                  type="file"
+                  name="file"
+                  formControlName="file"
+                  (change)="onFileChange($event)"
+              />
+            </div>
+            <button class="btn-primary mt-38 mb-16">Save and post</button>
+        </div>
+    </form>
+</div>

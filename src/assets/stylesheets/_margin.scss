@@ -1,0 +1,32 @@
+$marginSizes: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 44, 46, 48, 50, 54, 56, 58, 60, 80, 86, 88, 100, 180, 500;
+
+@each $size in $marginSizes {
+
+
+  .m-#{$size} {
+    margin: #{$size} + 'px';
+  }
+  .mx-#{$size} {
+    margin-right: #{$size} + 'px';
+    margin-left: #{$size} + 'px';
+  }
+  .mx-auto {
+    margin: 0 auto;
+  }
+  .my-#{$size} {
+    margin-top: #{$size} + 'px';
+    margin-bottom: #{$size} + 'px';
+  }
+  .ms-#{$size} {
+    margin-left: #{$size} + 'px';
+  }
+  .me-#{$size} {
+    margin-right: #{$size} + 'px';
+  }
+  .mt-#{$size} {
+    margin-top: #{$size} + 'px';
+  }
+  .mb-#{$size} {
+    margin-bottom: #{$size} + 'px';
+  }
+}

@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/stylesheets/_typography.scss";
+@import "assets/stylesheets/_margin.scss";
+@import "assets/stylesheets/_padding.scss";
+@import "assets/stylesheets/_width.scss";
+@import "assets/stylesheets/_utilities.scss";
+@import "assets/stylesheets/overwrite.scss";
+@import "assets/stylesheets/common.scss";
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import "assets/stylesheets/_color.scss";
+@import "assets/stylesheets/_shared.scss";
+@import "assets/stylesheets/_border-radius.scss";
+
+body {
+    font-family: "Oxygen";
+    font-size: 16px;
+    margin: 0;
+}

@@ -1,0 +1,75 @@
+<div class="w-100" fxLayout="column" >
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="w-100 bg-white px-10 position--fixed z-index box--shadow-bottom">
+    <div fxLayout="row" fxLayoutAlign="center center"  fxLayoutGap="20px" class=" py-20">
+      <img src="../../assets/images/logo.svg" alt="" width="80">
+      <h3 class="my-0">Admin Dashboard</h3>
+    </div>
+    <div fxLayout="row" fxLayoutGap="14" fxLayoutAlign="start center" class="box--shadow px-12 py-4 br-4">
+      <img src="../../assets/images/profile.png" alt="profile" width="32" height="32">
+      <div>
+        <p class="my-0">David Blaine</p>
+        <p class="text-primary my-0 fs-14">Admin</p>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row" class="w-100 mt-88">
+    <nav fxLayout="column" fxLayoutAlign="start" class="w-15 border--secondary side-nav">
+      <ul fxLayout="column" class="w-100 fw-600 ps-16">
+        <li class="admin__nav py-14 w-100 color--black-07"><i class="pi pi-th-large me-8 color--black-07 fw-800"></i>Overview</li>
+        <li class="admin__nav py-14 w-100 color--black-07"><i class="pi pi-book me-8 color--black-07 fw-800"></i>Blogs</li>
+        <li class="admin__nav py-14 w-100 color--black-07"><i class="pi pi-file me-8 color--black-07 fw-800"></i>Endorsements</li>
+        <li class="admin__nav py-14 w-100 color--black-07"><i class="pi pi-file-edit me-8 color--black-07 fw-800"></i>Petitions</li>
+        <li class="admin__nav py-14 w-100 color--black-07"><i class="pi pi-calendar me-8 color--black-07 fw-800"></i>Events</li>
+        <li class="admin__nav py-14 w-100 color--black-07"><i class="pi pi-envelope me-8 color--black-07 fw-800"></i>Posts</li>
+      </ul>
+    </nav>
+    <div class="px-30 w-100  bg-secondary">
+      <div class="px-30">
+        <h3>Hi Admin</h3>
+        <p class="text-primary">Welcome back to NIP dashboard</p>
+      </div>
+      <div class="w-100" fxLayout="row" fxLayoutGap="30">
+        <div fxLayout="column" fxLayoutAlign="center center" class="bg-white cards text--center w-25 box--shadow ">
+          <h4 class="mt-0">Endorsement</h4>
+          <p class="color--black-07 fw-600 my-0">200</p>
+        </div>
+        <div class="bg-white cards text--center w-25 py-16 px-30 box--shadow ">
+          <h4 class="mt-0">Petition</h4>
+          <p class="color--black-07 my-0 fw-600">100</p>
+        </div>
+        <div class="bg-white cards text--center w-25 py-16 px-30 box--shadow ">
+          <h4 class="mt-0">Posts</h4>
+          <p class="color--black-07 my-0 fw-600">400</p>
+        </div>
+        <div class="bg-white cards text--center w-25 py-16 px-30 box--shadow ">
+          <h4 class="mt-0">Users</h4>
+          <p class="color--black-07 my-0 fw-600">2000</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Dzongkhag Data</h3>
+        <p-chart type="bar" [data]="basicData" [options]="basicOptions"></p-chart>
+      </div>
+
+      <div class="w-100 my-30 bg-white">
+        <div class="w-100 py-8 bg-light-blue px-20 box--shadow-bottom fw-600 text--center" fxLayout="row" fxLayoutGap="30" fxLayoutAlign="start center">
+          <p class="w-100 my-6">No</p>
+          <p class="w-100 my-6">Username</p>
+          <p class="w-100 my-6">Profile</p>
+          <p class="w-100 my-6">Date</p>
+          <p class="w-100 my-6">Action</p>
+        </div>
+        <div class="px-20 py-4 box--shadow-bottom text--center user-data" fxLayout="row" fxLayoutGap="30" fxLayoutAlign="start center" *ngFor="let number of [1, 2, 3, 4, 5]">
+          <p class="w-100 color--black-07">{{number}}</p>
+          <p class="w-100 color--black-07">David</p>
+          <div class="w-100">
+            <img src="../../assets/images/profile.png" alt="profile" width="40" height="40">
+          </div>
+          <p class="w-100 color--black-07">25/10/2022</p>
+          <p class="w-100"><i class="pi pi-trash color--black-07 cursor--pointer"></i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

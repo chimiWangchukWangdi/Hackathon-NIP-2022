@@ -1,0 +1,15 @@
+.chats {
+  height: 34vh;
+  overflow-y: scroll;
+  &--footer {
+    width: 400px;
+    bottom: 78px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+

@@ -1,0 +1,34 @@
+<div class="w-100 petition my-40">
+  <app-share></app-share>
+  <form [formGroup]="blogPostForm" (submit)="onFormSubmit(blogPostForm)" class="w-50 p-60 mx-auto form" fxLayout="column" fxLayoutGap="16">
+    <div class="w-100">
+      <h2 class="fs-28">Create a post</h2>
+      <input type="text" class="w-100 fs-18 bg-secondary border--none rounded p-16" formControlName="title" placeholder="Headline*">
+    </div>
+    <div class="w-100">
+      <h3 class="fs-22">Description*</h3>
+      <p-editor [style]="{'height':'200px'}" formControlName="description"></p-editor>
+    </div>
+    <div>
+      <h3>Category</h3>
+      <div fxLayout="row wrap" fxLayoutGap="30">
+        <div class="my-10" fxLayout="row" fxLayoutGap="16" fxLayoutAlign="start center"
+             *ngFor="let number of catagories">
+          <input type="checkbox">
+          <label>{{number}}</label>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3>File upload</h3>
+      <div class="dropzone bg-secondary py-80 rounded text--center" >
+        <input type="file"
+               class="file"
+               name="file"
+               formControlName="file"
+               (change)="onFileChange($event)">
+      </div>
+      <button class="btn-primary mt-38 mb-16">Save and post</button>
+    </div>
+  </form>
+</div>

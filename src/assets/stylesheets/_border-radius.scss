@@ -1,0 +1,11 @@
+@use 'src/assets/stylesheets/shared' as *;
+
+@include boxModel((0, 2, 4, 8, 12, 16, 20, 52), 'br', 'border-radius');
+@include boxModel((0, 4), 'br-tl', 'border-top-left-radius');
+@include boxModel((0, 4), 'br-tr', 'border-top-right-radius');
+@include boxModel((0, 4), 'br-bl', 'border-bottom-left-radius');
+@include boxModel((0, 4), 'br-br', 'border-bottom-right-radius');
+@include boxModel((0, 4), 'br-top', ('border-top-left-radius', 'border-top-right-radius'));
+@include boxModel((0,8), 'br-bottom', ('border-bottom-left-radius', 'border-bottom-right-radius'));
+@include boxModel((0), 'br-left', ('border-bottom-left-radius', 'border-top-left-radius'));
+@include boxModel((0), 'br-right', ('border-bottom-right-radius', 'border-top-right-radius'));

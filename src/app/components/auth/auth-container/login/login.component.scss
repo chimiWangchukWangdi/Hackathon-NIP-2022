@@ -1,0 +1,22 @@
+@import "../../../../../assets/stylesheets/_variables.scss";
+
+:host ::ng-deep.login-wrapper {
+  margin: 0;
+
+  .p-inputtext, .p-float-label label {
+    font-size: 12px !important;
+    width: 100%;
+  }
+  .p-checkbox, .p-checkbox-box {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .p-button {
+    font-size: 12px !important;
+  }
+
+  .signin-potions {
+    border-top: 2px solid $primary ;
+  }
+}

@@ -1,0 +1,11 @@
+<div fxLayoutAlign="center center" class="auth-container bg--primary">
+  <div fxFlex="30">
+    <div class="bg--white br-4 p-4   mb-16">
+      <p>BLANK APP</p>
+    </div>
+    <div class="bg--white br-4 pt-3">
+      <p-tabMenu styleClass="w-100 fs-14" [model]="items" [activeItem]="activeItem"></p-tabMenu>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
